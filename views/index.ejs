@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>API CRUD de Tareas</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            max-width:900px;
+            margin:auto;
+            padding:30px;
+            background:#f5f5f5;
+        }
+
+        h1{
+            color:#1e3a8a;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+            background:white;
+        }
+
+        th,td{
+            border:1px solid #ccc;
+            padding:12px;
+            text-align:left;
+        }
+
+        th{
+            background:#1e3a8a;
+            color:white;
+        }
+
+        code{
+            background:#eee;
+            padding:2px 5px;
+            border-radius:4px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>📋 API REST - CRUD de Tareas</h1>
+
+<p>
+Esta API permite crear, consultar, modificar y eliminar tareas.
+Las respuestas se envían en formato JSON.
+</p>
+
+<h2>Endpoints disponibles</h2>
+
+<table>
+
+<tr>
+    <th>Método</th>
+    <th>Ruta</th>
+    <th>Descripción</th>
+</tr>
+
+<tr>
+    <td>GET</td>
+    <td><code>/api/v1/tasks</code></td>
+    <td>Obtiene todas las tareas.</td>
+</tr>
+
+<tr>
+    <td>GET</td>
+    <td><code>/api/v1/tasks/:id</code></td>
+    <td>Obtiene una tarea por su ID.</td>
+</tr>
+
+<tr>
+    <td>POST</td>
+    <td><code>/api/v1/tasks</code></td>
+    <td>Crea una nueva tarea.</td>
+</tr>
+
+<tr>
+    <td>PATCH</td>
+    <td><code>/api/v1/tasks/:id</code></td>
+    <td>Actualiza parcialmente una tarea.</td>
+</tr>
+
+<tr>
+    <td>DELETE</td>
+    <td><code>/api/v1/tasks/:id</code></td>
+    <td>Elimina una tarea.</td>
+</tr>
+
+<tr>
+    <td>PATCH</td>
+    <td><code>/api/v1/tasks/toggle/:id"</code></td>
+    <td>Actualiza el estado de la tarea a "completed"</td>
+</tr>
+
+</table>
+
+<h2>Ejemplo de tarea</h2>
+
+<pre>
+{
+  "title": "Estudiar Express",
+  "description": "Repasar rutas y middleware",
+  "completed": false
+}
+</pre>
+
+</body>
+</html>
